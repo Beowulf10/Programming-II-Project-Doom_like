@@ -1,0 +1,14 @@
+import math
+
+TILESIZE = 32
+
+ROWS = 10
+COLs = 15
+
+WINDOW_WIDTH = COLs * TILESIZE
+WINDOW_HEIGHT = ROWS * TILESIZE
+
+FOV = 60 * (math.pi / 100)
+
+RES = 4
+NUM_RAYS = WINDOW_WIDTH / RES
