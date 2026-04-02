@@ -40,7 +40,7 @@ class Ray:
         elif self.is_facing_down:
             first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) + TILESIZE
 
-        first_intersection_x = self.player.x + (first_intersection_y - self.player.x) / math.tan(self.rayAngle)
+        first_intersection_x = self.player.x + (first_intersection_y - self.player.y) / math.tan(self.rayAngle)
 
         next_horizontal_x = first_intersection_x
         next_horizontal_y = first_intersection_y
