@@ -2,11 +2,13 @@ import pygame
 from settings import *
 from map import Map
 from player import Player
+from enemy_gunt import Gunt
 
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 
 map = Map()
 player = Player()
+gunt = Gunt()
 
 clock = pygame.time.Clock()
 
@@ -23,5 +25,6 @@ while True:
 
     map.render(screen)
     player.render(screen)
+    
 
     pygame.display.update()
