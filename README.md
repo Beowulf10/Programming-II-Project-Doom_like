@@ -26,7 +26,7 @@ We are dividing the video between all three of us:
   
             47:38 Interactive GamePlay
 
-  -Optional:
+  -Optional (but not necessary):
   
             16:02 Texturing
             
