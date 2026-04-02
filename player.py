@@ -12,6 +12,12 @@ class Player:
         self.rotationAngle = 0
         self.moveSpeed = 2.5
         self.rotationSpeed = 2 * (math.pi / 180)
+        self.shot = False
+
+    def single_fire_event(self, event):
+        if event.type == pg.MOUSEBUTTONDOWN:
+            if event.button == 1 and not self.shot:
+                self.shot = True
 
     def update(self):
 
