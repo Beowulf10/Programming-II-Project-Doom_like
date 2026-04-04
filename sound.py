@@ -1,0 +1,11 @@
+#Need to find .wav audios and remove comment from main.py
+'''
+import pygame as pg
+
+class Sound:
+    def __init__(self):
+        self.game
+        pg.mixer.init()
+        self.path = 'resources/sound/'
+        self.shotgun = pg.mixer.Sound(self.path + 'shotgun.wav')
+        '''

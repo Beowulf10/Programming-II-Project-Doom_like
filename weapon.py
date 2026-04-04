@@ -1,9 +1,7 @@
-#Remove quotations when sprites are complete
-
-'''from sprite_object import *
+from sprite_object import *
 
 class Weapon(AnimatedSprite):
-    def __init__(self, game, path='resources/sprites/weapon/shotgun/0.png)', scale=0.4, animation_time=90):
+    def __init__(self, game, path='resources/sprites/weapon/shotgun/0.png', scale=4, animation_time=90):
         super().__init__(game=game, path=path, scale=scale, animation_time=animation_time)
         self.images = deque(
             [pg.transform.smoothscale(img, (self.image.get_width() * scale, self.image.get_height() * scale))
@@ -20,10 +18,10 @@ class Weapon(AnimatedSprite):
             if self.animation_trigger:
                 self.images.rotate(-1)
                 self.image = self.images[0]
-                self.framer_counter += 1
+                self.frame_counter += 1
                 if self.frame_counter == self.num_images:
                     self.reloading = False
-                    self.framer_counter = 0
+                    self.frame_counter = 0
 
     def draw(self):
         self.game.screen.blit(self.images[0], self.weapon_pos)
@@ -31,4 +29,3 @@ class Weapon(AnimatedSprite):
     def update(self):
         self.check_animation_time()
         self.animate_shot()
-        '''
